@@ -8,13 +8,13 @@
        What shows in browser tabs, search results, and when
        someone shares your link on LinkedIn/WhatsApp/etc.
        ════════════════════════════════════════════════════ -->
-  <title>Nick Tolias — Global Business Development Leader</title>
-  <meta name="description" content="Nick Tolias — Global Business Development Leader, Strategic Partnerships, Enterprise Sales, and Go-to-Market Growth. Based in Athens, Greece." />
+  <title>Nick Tolias — Partnerships & Go-to-Market Leader</title>
+  <meta name="description" content="Senior partnerships and go-to-market leader at Microsoft. I help technology companies grow through strategic alliances, enterprise sales, and disciplined GTM execution. Based in Athens, Greece." />
   <meta name="author" content="Nick Tolias" />
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Nick Tolias — Global Business Development Leader" />
-  <meta property="og:description" content="Strategic Partnerships · Enterprise Sales · Go-to-Market & Revenue Growth" />
+  <meta property="og:title" content="Nick Tolias — Partnerships & Go-to-Market Leader" />
+  <meta property="og:description" content="I help technology companies grow through strategic partnerships, enterprise sales, and disciplined go-to-market execution." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://tolias.online" />
   <meta property="og:image" content="https://tolias.online/assets/profile.jpg" />
@@ -89,7 +89,85 @@
     nav.top a:hover { color: var(--text); text-decoration: none; }
 
     /* Hero */
-    .hero { padding: 80px 0 56px; }
+    .hero { padding: 96px 0 40px; }
+    .eyebrow {
+      display: inline-block;
+      font-size: 12px; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--accent);
+      background: rgba(37, 99, 235, 0.08);
+      padding: 6px 12px; border-radius: 999px;
+      margin-bottom: 14px;
+    }
+    .hero .lede {
+      color: var(--text); font-size: 19px; line-height: 1.6;
+      margin-top: 16px; max-width: 620px;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin-top: 56px;
+      padding-top: 32px;
+      border-top: 1px solid var(--border);
+    }
+    .stat .num {
+      font-size: 32px; font-weight: 800;
+      color: var(--text); letter-spacing: -0.02em;
+      line-height: 1;
+    }
+    .stat .num .accent { color: var(--accent); }
+    .stat .label {
+      color: var(--muted); font-size: 13px;
+      margin-top: 8px; line-height: 1.4;
+    }
+
+    /* Pillars / Expertise */
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .pillar {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .pillar:hover { border-color: rgba(37, 99, 235, 0.35); transform: translateY(-2px); }
+    .pillar .pillar-icon {
+      width: 40px; height: 40px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(37, 99, 235, 0.08);
+      border-radius: 10px;
+      font-size: 20px;
+      margin-bottom: 14px;
+    }
+    .pillar h3 { font-size: 17px; margin: 0 0 8px; font-weight: 700; }
+    .pillar p { color: var(--muted); font-size: 14px; margin: 0; line-height: 1.55; }
+
+    /* Recognition callout */
+    .recognition {
+      background: linear-gradient(135deg, rgba(37, 99, 235, 0.06), rgba(14, 165, 233, 0.04));
+      border: 1px solid rgba(37, 99, 235, 0.18);
+      border-radius: 16px;
+      padding: 24px 28px;
+      display: flex; align-items: center; gap: 20px;
+      flex-wrap: wrap;
+    }
+    .recognition .badge {
+      width: 56px; height: 56px;
+      background: var(--text); color: #fff;
+      border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 26px;
+      flex-shrink: 0;
+    }
+    .recognition .reco-text { flex: 1; min-width: 240px; }
+    .recognition strong { color: var(--text); font-size: 16px; }
+    .recognition p { color: var(--muted); font-size: 14px; margin: 4px 0 0; }
+    
     .hero-grid {
       display: grid;
       grid-template-columns: 140px 1fr;
@@ -235,9 +313,8 @@
       <div class="brand">Nick Tolias</div>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#expertise">Expertise</a></li>
         <li><a href="#experience">Experience</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#skills">Skills</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </div>
@@ -254,15 +331,40 @@
         <!-- ════════════════════════════════════════════════════
              EDIT: NAME & HEADLINE
              ════════════════════════════════════════════════════ -->
-        <h1>Nick Tolias</h1>
-        <p class="headline">Global Business Development Leader · Strategic Partnerships · Enterprise Sales · Go-to-Market &amp; Revenue Growth</p>
+        <span class="eyebrow">Senior Partner Development Manager · Microsoft</span>
+        <h1>Helping technology companies grow with Microsoft.</h1>
+        <p class="lede">I lead strategic partnerships and go-to-market for software companies across Europe South — turning ambitious product roadmaps into measurable enterprise revenue.</p>
         <div class="meta">
-          <span>Marousi, Attiki, Greece</span>
+          <span>Athens, Greece · Working across EMEA</span>
         </div>
         <div class="cta-row">
-          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-primary" href="#contact">Let's talk</a>
           <a class="btn btn-secondary" href="https://www.linkedin.com/in/nikolaostolias/" target="_blank" rel="noopener">LinkedIn ↗</a>
         </div>
+      </div>
+    </div>
+
+    <!-- ════════════════════════════════════════════════════
+         EDIT: STATS ROW
+         Three short proof-points. Update the .num and .label
+         text below to change them.
+         ════════════════════════════════════════════════════ -->
+    <div class="stats">
+      <div class="stat">
+        <div class="num">15<span class="accent">+</span></div>
+        <div class="label">Years in tech sales, partnerships & GTM</div>
+      </div>
+      <div class="stat">
+        <div class="num">5<span class="accent">+</span></div>
+        <div class="label">Years driving partner growth at Microsoft</div>
+      </div>
+      <div class="stat">
+        <div class="num">EMEA</div>
+        <div class="label">Gold Club · Microsoft FY25</div>
+      </div>
+      <div class="stat">
+        <div class="num">EU&nbsp;South</div>
+        <div class="label">ISV partner portfolio across the region</div>
       </div>
     </div>
   </header>
@@ -273,9 +375,54 @@
        ════════════════════════════════════════════════════ -->
   <section id="about" class="container about">
     <h2>About</h2>
-    <p>I am a business development and sales leader with a strong track record of driving revenue growth, strategic partnerships, and go-to-market execution across enterprise and technology ecosystems.</p>
-    <p>I specialize in building and scaling high-value partnerships, shaping commercial strategy, and working closely with executive stakeholders to turn complex solutions into measurable business outcomes.</p>
+    <p>I'm a partnerships and go-to-market leader with 15+ years of experience helping technology businesses grow — from telecom and consumer IoT to today's cloud and AI ecosystems. I currently lead business development for software companies at Microsoft Europe South, working with founders, executives, and field teams to shape joint strategy and accelerate enterprise outcomes.</p>
+    <p>My focus: take complex platforms and partner ecosystems and translate them into clear, commercial plans that move the needle — for the partner, for the customer, and for the cloud business behind both.</p>
   </section>
+
+  <!-- ════════════════════════════════════════════════════
+       EDIT: WHAT I DO (PILLARS)
+       Each <div class="pillar"> is one capability card.
+       ════════════════════════════════════════════════════ -->
+  <section id="expertise" class="container">
+    <h2>What I do</h2>
+    <div class="pillars">
+      <div class="pillar">
+        <div class="pillar-icon">🤝</div>
+        <h3>Strategic partnerships</h3>
+        <p>Building and scaling high-value alliances with software companies and system integrators — from joint value proposition to executive sponsorship and quarterly business rhythm.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🚀</div>
+        <h3>Go-to-market execution</h3>
+        <p>Designing GTM motions that work in the real world — co-sell plays, marketplace strategy, sales enablement, and the operational discipline to turn plans into pipeline.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">💼</div>
+        <h3>Enterprise sales leadership</h3>
+        <p>Engaging C-suite stakeholders on commercial strategy, account planning, and consumption growth — shaping outcomes across complex, multi-stakeholder deals.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon">🌐</div>
+        <h3>Ecosystem &amp; cloud growth</h3>
+        <p>Connecting partner innovation to Microsoft solution areas and industry priorities — accelerating cloud adoption while keeping the customer outcome at the center.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       EDIT: RECOGNITION CALLOUT
+       Highlight a major award or milestone here.
+       ════════════════════════════════════════════════════ -->
+  <section id="recognition" class="container">
+    <div class="recognition">
+      <div class="badge">🏆</div>
+      <div class="reco-text">
+        <strong>Microsoft EMEA Gold Club · Fiscal Year 2025</strong>
+        <p>Recognised for outstanding performance, transformation impact, and contribution to Microsoft's overall growth across the region.</p>
+      </div>
+    </div>
+  </section>
+
 
   <!-- ════════════════════════════════════════════════════
        EDIT: EXPERIENCE
@@ -297,28 +444,29 @@
           <div class="role">
             <div class="role-head">
               <div>
-                <h3>Sr. Partner Development Manager — Business Development, Software Development Companies</h3>
+                <h3>Sr. Partner Development Manager — Software Development Companies</h3>
                 <div class="company">Microsoft · Europe South</div>
               </div>
               <div class="dates">Jan 2026 – Present</div>
             </div>
-            <div class="location">Hybrid · Europe South</div>
+            <div class="location">Hybrid · Europe South region</div>
+            <p>Leading business development with software companies across Europe South — driving joint cloud and AI growth, marketplace momentum, and strategic co-sell with Microsoft field teams.</p>
           </div>
           <div class="role">
             <div class="role-head">
               <div>
-                <h3>Sr. Partner Development Manager — Business Development, System Integrators</h3>
+                <h3>Sr. Partner Development Manager — System Integrators</h3>
                 <div class="company">Microsoft · Greece</div>
               </div>
               <div class="dates">Nov 2020 – Jan 2026 · 5 yrs 3 mos</div>
             </div>
             <ul>
-              <li>Drove account planning, partner performance, and the overall business relationship working closely with C-Suite executives.</li>
-              <li>Defined sales, go-to-market, new business, and consumption of Microsoft products and services.</li>
-              <li>Accelerated partner and solution innovation across Microsoft solution areas and industry priorities.</li>
-              <li>Captured market opportunities and drove partner growth through innovation.</li>
+              <li>Owned the end-to-end partner relationship — account planning, performance, and executive engagement at C-suite level.</li>
+              <li>Defined sales, go-to-market, new business, and Microsoft cloud consumption strategy with each partner.</li>
+              <li>Accelerated joint solution innovation aligned to Microsoft solution areas and industry priorities.</li>
+              <li>Captured market opportunities and unlocked partner growth through targeted innovation plays.</li>
             </ul>
-            <p><strong>EMEA Gold Club · Fiscal Year 25</strong> — recognition for outstanding performance, transformation impact, and contribution to Microsoft's overall growth.</p>
+            <p><strong>🏆 Microsoft EMEA Gold Club · FY25</strong> — recognition for outstanding performance, transformation impact, and contribution to Microsoft's overall growth.</p>
           </div>
         </div>
       </div>
@@ -389,48 +537,20 @@
         </div>
       </div>
 
+      <!-- ════════════════════════════════════════════════════
+           EDIT: EARLIER ROLES (compact — pre-Vodafone)
+           ════════════════════════════════════════════════════ -->
       <div class="role">
         <div class="role-head">
           <div>
-            <h3>Event Manager (Fixed-Term Contract)</h3>
-            <div class="company">Win to Win — Business Consultants</div>
+            <h3>Earlier roles</h3>
+            <div class="company">Win to Win · Ministry of Economy &amp; Finance · Xerox · Hellenic Statistical Authority</div>
           </div>
-          <div class="dates">Jan 2011 – Mar 2011</div>
+          <div class="dates">2006 – 2011</div>
         </div>
-        <p>Responsible for the preparation, support, and conduct of "Career Days 2011" for Economists.</p>
+        <p>Cross-functional experience in event management, digital transformation projects in financial services (digitisation of historic archives, electronic signature operations), and economic research on SMEs and e-commerce — the foundation for a career at the intersection of technology and commercial strategy.</p>
       </div>
 
-      <div class="role">
-        <div class="role-head">
-          <div>
-            <h3>Employee</h3>
-            <div class="company">Ministry of Economy and Finance</div>
-          </div>
-          <div class="dates">Oct 2008 – Oct 2009</div>
-        </div>
-      </div>
-
-      <div class="role">
-        <div class="role-head">
-          <div>
-            <h3>Digital Operator</h3>
-            <div class="company">Xerox · Greece</div>
-          </div>
-          <div class="dates">Sep 2007 – Sep 2008</div>
-        </div>
-        <p>Worked on the digitisation project of the historic archive of the Agricultural Bank of Greece and in Millennium Bank's electronic signature department.</p>
-      </div>
-
-      <div class="role">
-        <div class="role-head">
-          <div>
-            <h3>External Collaborator — Researcher</h3>
-            <div class="company">Hellenic Statistical Authority</div>
-          </div>
-          <div class="dates">Jun 2006 – Sep 2006</div>
-        </div>
-        <p>Researcher on a project covering SMEs and e-commerce.</p>
-      </div>
 
     </div>
   </section>
@@ -465,21 +585,20 @@
        Each <span class="skill">...</span> is one skill tag.
        ════════════════════════════════════════════════════ -->
   <section id="skills" class="container">
-    <h2>Skills</h2>
+    <h2>Skills &amp; expertise</h2>
     <div class="skills">
-      <span class="skill">Business Development</span>
       <span class="skill">Strategic Partnerships</span>
-      <span class="skill">Enterprise Sales</span>
       <span class="skill">Go-to-Market Strategy</span>
-      <span class="skill">Cloud Computing</span>
+      <span class="skill">Enterprise Sales</span>
+      <span class="skill">Cloud &amp; AI Ecosystems</span>
+      <span class="skill">Co-sell &amp; Marketplace</span>
+      <span class="skill">C-Suite Engagement</span>
+      <span class="skill">Account Planning</span>
+      <span class="skill">Business Development</span>
+      <span class="skill">Sales Enablement</span>
       <span class="skill">Telecommunications</span>
-      <span class="skill">Consumer Electronics</span>
       <span class="skill">Consumer IoT</span>
-      <span class="skill">Event Management</span>
-      <span class="skill">Social Media</span>
       <span class="skill">Customer Experience</span>
-      <span class="skill">Business Analysis</span>
-      <span class="skill">Data Analysis</span>
     </div>
   </section>
 
@@ -488,18 +607,18 @@
        Change the email/LinkedIn URL in the href="..." values.
        ════════════════════════════════════════════════════ -->
   <section id="contact" class="container">
-    <h2>Get in touch</h2>
-    <p style="color: var(--muted); max-width: 640px;">Open to conversations about partnerships, go-to-market collaboration, and enterprise growth.</p>
+    <h2>Let's build something together</h2>
+    <p style="color: var(--muted); max-width: 640px; font-size: 17px;">If you're a software company looking to grow with Microsoft, a leader exploring partnership strategy, or simply want to compare notes on the cloud and AI ecosystem — I'd love to hear from you.</p>
     <div class="contact-grid">
-      <a class="contact-card" href="https://www.linkedin.com/in/nikolaostolias/" target="_blank" rel="noopener">
-        <span class="icon">💼</span>
-        <div class="label">LinkedIn</div>
-        <div class="value">@nikolaostolias</div>
-      </a>
       <a class="contact-card" href="mailto:hello@tolias.online">
         <span class="icon">✉️</span>
         <div class="label">Email</div>
         <div class="value">hello@tolias.online</div>
+      </a>
+      <a class="contact-card" href="https://www.linkedin.com/in/nikolaostolias/" target="_blank" rel="noopener">
+        <span class="icon">💼</span>
+        <div class="label">LinkedIn</div>
+        <div class="value">@nikolaostolias</div>
       </a>
       <div class="contact-card">
         <span class="icon">📍</span>
