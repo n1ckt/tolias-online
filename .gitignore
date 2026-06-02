@@ -1,0 +1,6 @@
+# Local preview/screenshots — not needed on the live site
+preview-*.png
+
+# Mac/OS junk
+.DS_Store
+Thumbs.db

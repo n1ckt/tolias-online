@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- ════════════════════════════════════════════════════
+       EDIT: PAGE TITLE & SOCIAL PREVIEW
+       What shows in browser tabs, search results, and when
+       someone shares your link on LinkedIn/WhatsApp/etc.
+       ════════════════════════════════════════════════════ -->
+  <title>Nick Tolias — Global Business Development Leader</title>
+  <meta name="description" content="Nick Tolias — Global Business Development Leader, Strategic Partnerships, Enterprise Sales, and Go-to-Market Growth. Based in Athens, Greece." />
+  <meta name="author" content="Nick Tolias" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Nick Tolias — Global Business Development Leader" />
+  <meta property="og:description" content="Strategic Partnerships · Enterprise Sales · Go-to-Market & Revenue Growth" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tolias.online" />
+  <meta property="og:image" content="https://tolias.online/assets/profile.jpg" />
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E👋%3C/text%3E%3C/svg%3E" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- ════════════════════════════════════════════════════
+       EDIT: COLORS & THEME
+       Change the values below to recolor the whole site.
+       --accent is the link color & hover highlight.
+       ════════════════════════════════════════════════════ -->
+  <style>
+    :root {
+      --bg: #fafafa;          /* page background */
+      --bg-2: #ffffff;
+      --card: #ffffff;        /* card backgrounds */
+      --text: #15171c;        /* main text */
+      --muted: #6b7280;       /* secondary text (dates, labels) */
+      --accent: #2563eb;      /* primary accent (links, highlights) */
+      --accent-2: #0ea5e9;
+      --border: rgba(15, 23, 42, 0.08);
+      --shadow: 0 1px 3px rgba(15, 23, 42, 0.04), 0 4px 16px rgba(15, 23, 42, 0.04);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Layout */
+    .container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
+    section { padding: 64px 0; border-top: 1px solid var(--border); }
+    section:first-of-type { border-top: none; }
+    h1, h2, h3 { line-height: 1.25; margin: 0 0 16px; }
+    h2 { font-size: 28px; font-weight: 700; }
+    h2::before {
+      content: '';
+      display: inline-block;
+      width: 8px; height: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--accent-2));
+      border-radius: 50%;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+
+    /* Nav */
+    nav.top {
+      position: sticky; top: 0;
+      backdrop-filter: blur(14px);
+      background: rgba(250, 250, 250, 0.85);
+      border-bottom: 1px solid var(--border);
+      z-index: 50;
+    }
+    nav.top .container {
+      display: flex; align-items: center; justify-content: space-between;
+      padding-top: 14px; padding-bottom: 14px;
+    }
+    nav.top .brand { font-weight: 700; letter-spacing: 0.3px; }
+    nav.top ul { display: flex; gap: 24px; list-style: none; padding: 0; margin: 0; }
+    nav.top a { color: var(--muted); font-size: 14px; }
+    nav.top a:hover { color: var(--text); text-decoration: none; }
+
+    /* Hero */
+    .hero { padding: 80px 0 56px; }
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+    .avatar {
+      width: 140px; height: 140px; border-radius: 50%;
+      object-fit: cover;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--border);
+    }
+    .hero h1 {
+      font-size: clamp(32px, 5vw, 48px);
+      font-weight: 800;
+      color: var(--text);
+      letter-spacing: -0.02em;
+    }
+    .hero .headline { color: var(--muted); font-size: 18px; margin-top: 8px; }
+    .hero .meta { color: var(--muted); font-size: 14px; margin-top: 12px; display: flex; gap: 16px; flex-wrap: wrap; }
+    .hero .meta span::before { content: '📍 '; }
+    .hero .meta a::before { content: '✉ '; }
+
+    .cta-row { margin-top: 24px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      font-weight: 600; font-size: 14px;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+    .btn-primary {
+      background: var(--text);
+      color: #fff;
+    }
+    .btn-primary:hover { background: #000; }
+    .btn-secondary {
+      background: var(--card); color: var(--text);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { border-color: var(--text); }
+
+    /* About */
+    .about p { color: var(--text); font-size: 17px; max-width: 720px; }
+
+    /* Experience */
+    .timeline { display: flex; flex-direction: column; gap: 16px; }
+    .role {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 22px 24px;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .role:hover { transform: translateY(-2px); border-color: rgba(37, 99, 235, 0.35); box-shadow: var(--shadow); }
+    .role-head {
+      display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;
+    }
+    .role h3 { font-size: 18px; margin: 0; }
+    .role .company { color: var(--accent); font-weight: 600; font-size: 15px; }
+    .role .dates { color: var(--muted); font-size: 13px; white-space: nowrap; }
+    .role .location { color: var(--muted); font-size: 13px; margin-top: 4px; }
+    .role ul { margin: 12px 0 0; padding-left: 18px; color: var(--text); }
+    .role ul li { margin-bottom: 6px; }
+    .role p { margin: 12px 0 0; color: var(--text); }
+
+    .company-group {
+      background: #f4f5f7;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 20px;
+    }
+    .company-group .group-head {
+      display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
+    }
+    .company-group .group-head h3 { font-size: 20px; margin: 0; }
+    .company-group .group-head .dates { color: var(--muted); font-size: 13px; }
+    .company-group .role { background: #fff; }
+
+    /* Education */
+    .edu-list { display: grid; gap: 14px; }
+    .edu {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 22px;
+    }
+    .edu h3 { font-size: 16px; margin: 0; }
+    .edu .school { color: var(--accent); font-weight: 600; font-size: 14px; }
+    .edu .dates { color: var(--muted); font-size: 13px; margin-top: 4px; }
+
+    /* Skills */
+    .skills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill {
+      background: var(--card);
+      border: 1px solid var(--border);
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--text);
+    }
+    .skill:hover { border-color: var(--accent); color: var(--accent); }
+
+    /* Contact */
+    .contact-grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px;
+    }
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px;
+      text-align: center;
+      transition: border-color 0.15s ease, transform 0.15s ease;
+    }
+    .contact-card:hover { border-color: var(--accent); transform: translateY(-2px); text-decoration: none; }
+    .contact-card .icon { font-size: 28px; display: block; margin-bottom: 8px; }
+    .contact-card .label { color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .contact-card .value { color: var(--text); font-weight: 600; margin-top: 4px; word-break: break-word; }
+
+    footer {
+      text-align: center; padding: 40px 24px; color: var(--muted); font-size: 13px;
+      border-top: 1px solid var(--border);
+    }
+
+    /* Mobile */
+    @media (max-width: 640px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .avatar { margin: 0 auto; width: 120px; height: 120px; }
+      .hero .meta { justify-content: center; }
+      .cta-row { justify-content: center; }
+      nav.top ul { gap: 14px; }
+      nav.top a { font-size: 13px; }
+      section { padding: 48px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="top">
+    <div class="container">
+      <div class="brand">Nick Tolias</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero container">
+    <div class="hero-grid">
+      <!-- ════════════════════════════════════════════════════
+           EDIT: PROFILE PHOTO
+           Replace assets/profile.jpg with a new image to update.
+           ════════════════════════════════════════════════════ -->
+      <img class="avatar" src="assets/profile.jpg" alt="Nick Tolias" />
+      <div>
+        <!-- ════════════════════════════════════════════════════
+             EDIT: NAME & HEADLINE
+             ════════════════════════════════════════════════════ -->
+        <h1>Nick Tolias</h1>
+        <p class="headline">Global Business Development Leader · Strategic Partnerships · Enterprise Sales · Go-to-Market &amp; Revenue Growth</p>
+        <div class="meta">
+          <span>Marousi, Attiki, Greece</span>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#contact">Get in touch</a>
+          <a class="btn btn-secondary" href="https://www.linkedin.com/in/nikolaostolias/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ════════════════════════════════════════════════════
+       EDIT: ABOUT SECTION
+       Each <p>...</p> block is a paragraph.
+       ════════════════════════════════════════════════════ -->
+  <section id="about" class="container about">
+    <h2>About</h2>
+    <p>I am a business development and sales leader with a strong track record of driving revenue growth, strategic partnerships, and go-to-market execution across enterprise and technology ecosystems.</p>
+    <p>I specialize in building and scaling high-value partnerships, shaping commercial strategy, and working closely with executive stakeholders to turn complex solutions into measurable business outcomes.</p>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       EDIT: EXPERIENCE
+       Each <div class="role">...</div> is one job.
+       A <div class="company-group"> groups multiple roles at
+       the same company. To add a new job, copy a "role" block
+       and edit the text inside.
+       ════════════════════════════════════════════════════ -->
+  <section id="experience" class="container">
+    <h2>Experience</h2>
+    <div class="timeline">
+
+      <div class="company-group">
+        <div class="group-head">
+          <h3>Microsoft</h3>
+          <span class="dates">Nov 2020 – Present · 5 yrs 8 mos</span>
+        </div>
+        <div class="timeline">
+          <div class="role">
+            <div class="role-head">
+              <div>
+                <h3>Sr. Partner Development Manager — Business Development, Software Development Companies</h3>
+                <div class="company">Microsoft · Europe South</div>
+              </div>
+              <div class="dates">Jan 2026 – Present</div>
+            </div>
+            <div class="location">Hybrid · Europe South</div>
+          </div>
+          <div class="role">
+            <div class="role-head">
+              <div>
+                <h3>Sr. Partner Development Manager — Business Development, System Integrators</h3>
+                <div class="company">Microsoft · Greece</div>
+              </div>
+              <div class="dates">Nov 2020 – Jan 2026 · 5 yrs 3 mos</div>
+            </div>
+            <ul>
+              <li>Drove account planning, partner performance, and the overall business relationship working closely with C-Suite executives.</li>
+              <li>Defined sales, go-to-market, new business, and consumption of Microsoft products and services.</li>
+              <li>Accelerated partner and solution innovation across Microsoft solution areas and industry priorities.</li>
+              <li>Captured market opportunities and drove partner growth through innovation.</li>
+            </ul>
+            <p><strong>EMEA Gold Club · Fiscal Year 25</strong> — recognition for outstanding performance, transformation impact, and contribution to Microsoft's overall growth.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="company-group">
+        <div class="group-head">
+          <h3>Vodafone</h3>
+          <span class="dates">Dec 2011 – Nov 2020 · 9 yrs</span>
+        </div>
+        <div class="timeline">
+          <div class="role">
+            <div class="role-head">
+              <div>
+                <h3>Tech Sales &amp; Consumer IoT Sales Lead</h3>
+                <div class="company">Vodafone · Greece</div>
+              </div>
+              <div class="dates">Feb 2019 – Nov 2020</div>
+            </div>
+            <p>Led Retail Sales Team Ready — Vodafone Greece's most passionate sales team of tech enthusiasts enriching customers' lives through technology across all Vodafone shops in Greece.</p>
+            <ul>
+              <li>Business development and implementation of sales initiatives to drive team growth &amp; revenue.</li>
+              <li>Defined KPIs and sales metrics to drive team performance.</li>
+              <li>Forecast and analyzed sales and market trends.</li>
+              <li>Assessed, designed, and developed new sales channels.</li>
+              <li>Owned recruitment to accelerate team expansion.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <div class="role-head">
+              <div>
+                <h3>Consumer IoT Senior Product Manager — Marketing</h3>
+                <div class="company">Vodafone · Greece</div>
+              </div>
+              <div class="dates">Oct 2017 – May 2019</div>
+            </div>
+            <p>Designed, developed, and executed end-to-end the successful launch of Consumer IoT in the Greek market under the "V by Vodafone" proposition, working closely with cross-functional teams, vendors, and Vodafone Group.</p>
+            <ul>
+              <li>Coordinated stakeholders for the launch of "V by Vodafone".</li>
+              <li>Created and evaluated Consumer IoT product business cases.</li>
+              <li>Built training and selling materials to boost sales.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <div class="role-head">
+              <div>
+                <h3>Tech Team Lead — Sales</h3>
+                <div class="company">Vodafone · Headquarters, Chalandri</div>
+              </div>
+              <div class="dates">Apr 2015 – Sep 2017</div>
+            </div>
+            <p>Coordinated the Retail Sales Internet Team in selected regions across the country.</p>
+            <ul>
+              <li>Monitored sales team performance across stores nationally.</li>
+              <li>Assessed, recruited, and trained sales team members.</li>
+              <li>Provided coaching and on-the-job training to drive sales and KPI performance.</li>
+            </ul>
+          </div>
+          <div class="role">
+            <div class="role-head">
+              <div>
+                <h3>Internet Solutions Specialist — Sales</h3>
+                <div class="company">Vodafone</div>
+              </div>
+              <div class="dates">Dec 2011 – Apr 2015</div>
+            </div>
+            <p>Provided a personalized customer experience tailored to customer needs, plus training and consulting on getting the most out of new services and technologies. Delivered in-store training to staff on new products and services to boost sales and productivity, and partnered with other departments to deliver an integrated customer experience across communication channels.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <div>
+            <h3>Event Manager (Fixed-Term Contract)</h3>
+            <div class="company">Win to Win — Business Consultants</div>
+          </div>
+          <div class="dates">Jan 2011 – Mar 2011</div>
+        </div>
+        <p>Responsible for the preparation, support, and conduct of "Career Days 2011" for Economists.</p>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <div>
+            <h3>Employee</h3>
+            <div class="company">Ministry of Economy and Finance</div>
+          </div>
+          <div class="dates">Oct 2008 – Oct 2009</div>
+        </div>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <div>
+            <h3>Digital Operator</h3>
+            <div class="company">Xerox · Greece</div>
+          </div>
+          <div class="dates">Sep 2007 – Sep 2008</div>
+        </div>
+        <p>Worked on the digitisation project of the historic archive of the Agricultural Bank of Greece and in Millennium Bank's electronic signature department.</p>
+      </div>
+
+      <div class="role">
+        <div class="role-head">
+          <div>
+            <h3>External Collaborator — Researcher</h3>
+            <div class="company">Hellenic Statistical Authority</div>
+          </div>
+          <div class="dates">Jun 2006 – Sep 2006</div>
+        </div>
+        <p>Researcher on a project covering SMEs and e-commerce.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       EDIT: EDUCATION
+       Each <div class="edu"> is one entry.
+       ════════════════════════════════════════════════════ -->
+  <section id="education" class="container">
+    <h2>Education</h2>
+    <div class="edu-list">
+      <div class="edu">
+        <h3>MSc, Business and Management of Telecommunication Networks</h3>
+        <div class="school">National and Kapodistrian University of Athens</div>
+        <div class="dates">2010 – 2014</div>
+      </div>
+      <div class="edu">
+        <h3>BSc, Economic Science</h3>
+        <div class="school">National and Kapodistrian University of Athens</div>
+        <div class="dates">2003 – 2010</div>
+      </div>
+      <div class="edu">
+        <h3>High School Graduate</h3>
+        <div class="school">2nd High School of Preveza</div>
+        <div class="dates">2000 – 2003</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       EDIT: SKILLS
+       Each <span class="skill">...</span> is one skill tag.
+       ════════════════════════════════════════════════════ -->
+  <section id="skills" class="container">
+    <h2>Skills</h2>
+    <div class="skills">
+      <span class="skill">Business Development</span>
+      <span class="skill">Strategic Partnerships</span>
+      <span class="skill">Enterprise Sales</span>
+      <span class="skill">Go-to-Market Strategy</span>
+      <span class="skill">Cloud Computing</span>
+      <span class="skill">Telecommunications</span>
+      <span class="skill">Consumer Electronics</span>
+      <span class="skill">Consumer IoT</span>
+      <span class="skill">Event Management</span>
+      <span class="skill">Social Media</span>
+      <span class="skill">Customer Experience</span>
+      <span class="skill">Business Analysis</span>
+      <span class="skill">Data Analysis</span>
+    </div>
+  </section>
+
+  <!-- ════════════════════════════════════════════════════
+       EDIT: CONTACT
+       Change the email/LinkedIn URL in the href="..." values.
+       ════════════════════════════════════════════════════ -->
+  <section id="contact" class="container">
+    <h2>Get in touch</h2>
+    <p style="color: var(--muted); max-width: 640px;">Open to conversations about partnerships, go-to-market collaboration, and enterprise growth.</p>
+    <div class="contact-grid">
+      <a class="contact-card" href="https://www.linkedin.com/in/nikolaostolias/" target="_blank" rel="noopener">
+        <span class="icon">💼</span>
+        <div class="label">LinkedIn</div>
+        <div class="value">@nikolaostolias</div>
+      </a>
+      <a class="contact-card" href="mailto:hello@tolias.online">
+        <span class="icon">✉️</span>
+        <div class="label">Email</div>
+        <div class="value">hello@tolias.online</div>
+      </a>
+      <div class="contact-card">
+        <span class="icon">📍</span>
+        <div class="label">Based in</div>
+        <div class="value">Athens, Greece</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Nick Tolias · <a href="https://tolias.online">tolias.online</a>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
