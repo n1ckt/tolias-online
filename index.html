@@ -125,27 +125,33 @@
     /* Pillars / Expertise */
     .pillars {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
     }
     .pillar {
       background: var(--card);
       border: 1px solid var(--border);
       border-radius: 14px;
-      padding: 24px;
+      padding: 20px;
       transition: border-color 0.15s ease, transform 0.15s ease;
     }
     .pillar:hover { border-color: rgba(37, 99, 235, 0.35); transform: translateY(-2px); }
     .pillar .pillar-icon {
-      width: 40px; height: 40px;
+      width: 36px; height: 36px;
       display: flex; align-items: center; justify-content: center;
       background: rgba(37, 99, 235, 0.08);
       border-radius: 10px;
-      font-size: 20px;
-      margin-bottom: 14px;
+      font-size: 18px;
+      margin-bottom: 12px;
     }
-    .pillar h3 { font-size: 17px; margin: 0 0 8px; font-weight: 700; }
-    .pillar p { color: var(--muted); font-size: 14px; margin: 0; line-height: 1.55; }
+    .pillar h3 { font-size: 15px; margin: 0 0 6px; font-weight: 700; line-height: 1.3; }
+    .pillar p { color: var(--muted); font-size: 13.5px; margin: 0; line-height: 1.55; }
+    @media (max-width: 880px) {
+      .pillars { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 480px) {
+      .pillars { grid-template-columns: 1fr; }
+    }
 
     /* Recognition callout */
     .recognition {
@@ -389,22 +395,22 @@
       <div class="pillar">
         <div class="pillar-icon">🤝</div>
         <h3>Strategic partnerships</h3>
-        <p>Building and scaling high-value alliances with software companies and system integrators — from joint value proposition to executive sponsorship and quarterly business rhythm.</p>
+        <p>High-value alliances with software companies and SIs — from joint value prop to executive sponsorship and quarterly rhythm.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">🚀</div>
         <h3>Go-to-market execution</h3>
-        <p>Designing GTM motions that work in the real world — co-sell plays, marketplace strategy, sales enablement, and the operational discipline to turn plans into pipeline.</p>
+        <p>Co-sell plays, marketplace strategy, sales enablement, and the operational discipline to turn plans into pipeline.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">💼</div>
         <h3>Enterprise sales leadership</h3>
-        <p>Engaging C-suite stakeholders on commercial strategy, account planning, and consumption growth — shaping outcomes across complex, multi-stakeholder deals.</p>
+        <p>C-suite engagement on commercial strategy, account planning, and consumption growth across complex deals.</p>
       </div>
       <div class="pillar">
         <div class="pillar-icon">🌐</div>
         <h3>Ecosystem &amp; cloud growth</h3>
-        <p>Connecting partner innovation to Microsoft solution areas and industry priorities — accelerating cloud adoption while keeping the customer outcome at the center.</p>
+        <p>Connecting partner innovation to Microsoft solution areas — accelerating cloud adoption with the customer at the center.</p>
       </div>
     </div>
   </section>
