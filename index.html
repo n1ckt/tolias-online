@@ -57,10 +57,10 @@
 
     /* Layout */
     .container { max-width: 920px; margin: 0 auto; padding: 0 24px; }
-    section { padding: 64px 0; border-top: 1px solid var(--border); }
+    section { padding: 88px 0; border-top: 1px solid var(--border); }
     section:first-of-type { border-top: none; }
     h1, h2, h3 { line-height: 1.25; margin: 0 0 16px; }
-    h2 { font-size: 28px; font-weight: 700; }
+    h2 { font-size: 28px; font-weight: 700; margin-bottom: 28px; }
     h2::before {
       content: '';
       display: inline-block;
@@ -218,10 +218,11 @@
     .btn-secondary:hover { border-color: var(--text); }
 
     /* About */
-    .about p { color: var(--text); font-size: 17px; max-width: 720px; }
+    .about p { color: var(--text); font-size: 17px; max-width: 720px; margin: 0 0 16px; }
+    .about p:last-child { margin-bottom: 0; }
 
     /* Experience */
-    .timeline { display: flex; flex-direction: column; gap: 16px; }
+    .timeline { display: flex; flex-direction: column; gap: 20px; }
     .role {
       background: var(--card);
       border: 1px solid var(--border);
@@ -308,7 +309,8 @@
       .cta-row { justify-content: center; }
       nav.top ul { gap: 14px; }
       nav.top a { font-size: 13px; }
-      section { padding: 48px 0; }
+      section { padding: 60px 0; }
+      h2 { margin-bottom: 20px; }
     }
   </style>
 </head>
